@@ -1,0 +1,13 @@
+[Unit]
+Description=Htop Exporter Service
+After=network.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/home/user/monitoring
+ExecStart=/home/user/monitoring/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
